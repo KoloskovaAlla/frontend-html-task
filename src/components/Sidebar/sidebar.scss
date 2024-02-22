@@ -1,5 +1,5 @@
 .sidebar {
-  width: 250px;
+  width: 80px;
   height: calc(100% - 40px);
   background-color: #fff;
   color: #333;
@@ -15,10 +15,10 @@
 }
 
 .sidebar.opened {
-  width: 80px;
+  width: 300px;
 }
 
-.sidebar > div {
+.sidebar>div {
   padding: 10px;
   text-align: center;
 }
@@ -42,13 +42,19 @@
   color: #555;
 }
 
-.sidebar div > div {
+.sidebar div>div {
   padding: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.sidebar div > div:hover {
+.sidebar div>div:hover {
   background-color: #f0f0f0;
+}
+
+.bottom-routes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
