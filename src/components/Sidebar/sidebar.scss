@@ -1,0 +1,60 @@
+.sidebar {
+  width: 80px;
+  height: calc(100% - 40px);
+  background-color: #fff;
+  color: #333;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.sidebar.opened {
+  width: 300px;
+}
+
+.sidebar>div {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidebar button:hover {
+  color: #555;
+}
+
+.sidebar div>div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar div>div:hover {
+  background-color: #f0f0f0;
+}
+
+.bottom-routes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
