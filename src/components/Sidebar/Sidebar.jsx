@@ -69,7 +69,7 @@ export default class Sidebar extends React.Component {
           ))}
         </div>
 
-        <div div className={'bottom-routes'}>
+        <div className={'bottom-routes'}>
           {
             bottomRoutes.map((route) => (
               <div key={route.title} onClick={() => this.goToRoute(route.path)}>
