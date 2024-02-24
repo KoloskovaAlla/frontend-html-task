@@ -1,8 +1,8 @@
+import './sidebar.scss';
 import { useState } from 'react';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
-import './sidebar.scss';
 
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -38,7 +38,7 @@ const Sidebar = () => {
 
   return (
     <div className={containerClassnames}>
-      <div>
+      <div className={'sidebar-header'}>
         <img
           src={logo}
           alt="TensorFlow logo"
