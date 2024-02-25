@@ -43,16 +43,15 @@ const Sidebar = () => {
           src={logo}
           alt="TensorFlow logo"
         />
-        {isOpened && <span>TensorFlow</span>}
-        {/* <span>TensorFlow</span> */}
+        {isOpened && <span>TensorFlow</span>}   
         <button onClick={toggleSidebar}>
           <FontAwesomeIcon icon={isOpened ? ['fas', 'angle-left'] : ['fas', 'angle-right']} />
         </button>
       </div>
 
-      <div>
+      <div className={'sidebar-menu'}>
         {routes.map((route) => (
-          <div key={route.title} onClick={() => goToRoute(route.path)}>
+          <div className={'item'} key={route.title} onClick={() => goToRoute(route.path)}>
             <FontAwesomeIcon icon={route.icon} />
             {isOpened && <span>{route.title}</span>}
           </div>
