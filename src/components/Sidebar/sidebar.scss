@@ -1,6 +1,6 @@
-.sidebar {
+.sidebar {  
   width: 80px;
-  height: calc(100% - 40px);
+  height: calc(100% - 40px); 
   background-color: #fff;
   color: #333;
   position: fixed;
@@ -16,15 +16,45 @@
     border: 1px dashed orange;
     display: flex;
     align-items: flex-end;
-
+    
     span {   
-    margin-left: 10px;
+      margin-left: 5px;
+      border: 1px dashed blue;      
+      // margin-bottom: 10px;    
+    }
+    img {   
+      border: 1px dashed green; 
+      width: 50px;
+      height: auto;
+      // margin-bottom: 10px;    
+    }
+    button {
+      position: fixed;
+      margin-left: 100px;
+      background: white;
+      border: none;
+      z-index: 100;      
+      font-size: 20px;
+      cursor: pointer;
+      outline: none;      
+      border-radius: 50%;
+
+      svg {
+        color: rgb(54, 54, 54); /* Устанавливаем желаемый цвет для иконки */
+      }
     }
   }
 }
 
-.sidebar.opened {
-  width: 300px;
+.sidebar.opened { 
+  width: 20vw;
+  button {
+    background-color: rgb(221, 216, 216);
+    margin-right: -7%;
+    position: relative;
+    margin-left: auto;    
+  
+  }
 }
 
 .sidebar>div {
@@ -32,19 +62,8 @@
   text-align: center;
 }
 
-.sidebar img {
-  width: 50px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.sidebar button {
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 20px;
-  cursor: pointer;
-  outline: none;
+.sidebar-header {
+  display: flex; 
 }
 
 .sidebar button:hover {

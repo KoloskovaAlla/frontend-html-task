@@ -43,7 +43,8 @@ const Sidebar = () => {
           src={logo}
           alt="TensorFlow logo"
         />
-        <span>TensorFlow</span>
+        {isOpened && <span>TensorFlow</span>}
+        {/* <span>TensorFlow</span> */}
         <button onClick={toggleSidebar}>
           <FontAwesomeIcon icon={isOpened ? ['fas', 'angle-left'] : ['fas', 'angle-right']} />
         </button>
