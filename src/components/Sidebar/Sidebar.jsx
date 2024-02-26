@@ -25,6 +25,7 @@ const bottomRoutes = [
 
 const Sidebar = () => {
   const [isOpened, setIsOpened] = useState(true);
+  const [activeItem, setActiveItem] = useState('/');
 
   const toggleSidebar = () => {
     setIsOpened(prevState => !prevState);
@@ -32,6 +33,7 @@ const Sidebar = () => {
 
   const goToRoute = (path) => {
     console.log(`going to "${path}"`);
+    setActiveItem(path);
   };
 
   const containerClassnames = classnames('sidebar', { opened: isOpened });
@@ -43,7 +45,7 @@ const Sidebar = () => {
           src={logo}
           alt="TensorFlow logo"
         />
-        {isOpened && <span>TensorFlow</span>}   
+        {isOpened && <span>TensorFlow</span>}
         <button onClick={toggleSidebar}>
           <FontAwesomeIcon icon={isOpened ? ['fas', 'angle-left'] : ['fas', 'angle-right']} />
         </button>
@@ -51,7 +53,7 @@ const Sidebar = () => {
 
       <div className={'sidebar-menu'}>
         {routes.map((route) => (
-          <div className={'item'} key={route.title} onClick={() => goToRoute(route.path)}>
+          <div className={classnames('item', { active: activeItem === route.path })} key={route.title} onClick={() => goToRoute(route.path)}>
             <FontAwesomeIcon icon={route.icon} />
             {isOpened && <span>{route.title}</span>}
           </div>
