@@ -1,6 +1,6 @@
-.sidebar {  
+.sidebar {
   width: 80px;
-  height: calc(100% - 40px); 
+  height: calc(100% - 40px);
   background-color: #fff;
   color: #333;
   position: fixed;
@@ -11,49 +11,54 @@
   padding-top: 20px;
   transition: 0.5s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;  
+  border-radius: 10px;
+
   &-header {
     border: 1px dashed orange;
     display: flex;
     align-items: flex-end;
-    
-    span {   
+
+    span {
       margin-left: 5px;
-      border: 1px dashed blue;      
+      border: 1px dashed blue;
       // margin-bottom: 10px;    
     }
-    img {   
-      border: 1px dashed green; 
+
+    img {
+      border: 1px dashed green;
       width: 50px;
       height: auto;
       // margin-bottom: 10px;    
     }
+
     button {
       position: fixed;
       margin-left: 100px;
       background: white;
       border: none;
-      z-index: 100;      
+      z-index: 100;
       font-size: 20px;
       cursor: pointer;
-      outline: none;      
+      outline: none;
       border-radius: 50%;
 
       svg {
-        color: rgb(54, 54, 54); /* Устанавливаем желаемый цвет для иконки */
+        color: rgb(54, 54, 54);
+        /* Устанавливаем желаемый цвет для иконки */
       }
     }
   }
 }
 
-.sidebar.opened { 
+.sidebar.opened {
   width: 20vw;
+
   button {
     background-color: rgb(221, 216, 216);
     margin-right: -7%;
     position: relative;
-    margin-left: auto;    
-  
+    margin-left: auto;
+
   }
 }
 
@@ -63,12 +68,12 @@
 }
 
 .sidebar-header {
-  display: flex; 
-  
+  display: flex;
+
 }
 
 .sidebar button:hover {
-  color: #555; 
+  color: #555;
 
 }
 
@@ -81,9 +86,9 @@
 
 .sidebar div>div {
   border: 1px solid pink;
-  width: 80%;      
+  width: 80%;
   padding: 10px;
-  display: flex; 
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
@@ -97,4 +102,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.active {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  color: blue;
 }
