@@ -10,7 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 library.add(fas);
 
 const routes = [
-  { title: 'Home', icon: ['fas', 'solid', 'fa-house'], path: '/' },
+  { title: 'Home', icon: ['fas', 'fa-house'], path: '/' },
   { title: 'Sales', icon: ['fas', 'chart-line'], path: '/sales' },
   { title: 'Costs', icon: ['fas', 'chart-column'], path: '/costs' },
   { title: 'Payments', icon: ['fas', 'wallet'], path: '/payments' },
@@ -51,18 +51,26 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <div className={'sidebar-menu'}>
+      <div className={'sidebar-nav'}>
         {routes.map((route) => (
-          <div className={classnames('item', { active: activeItem === route.path })} key={route.title} onClick={() => goToRoute(route.path)}>
+          <div
+            className={classnames('item', { active: activeItem === route.path })}
+            key={route.title}
+            onClick={() => goToRoute(route.path)}
+          >
             <FontAwesomeIcon icon={route.icon} />
             {isOpened && <span>{route.title}</span>}
           </div>
         ))}
       </div>
 
-      <div className={'bottom-routes'}>
+      <div className={'sidebar-footer'}>
         {bottomRoutes.map((route) => (
-          <div key={route.title} onClick={() => goToRoute(route.path)}>
+          <div
+            className={classnames('item', { active: activeItem === route.path })}
+            key={route.title}
+            onClick={() => goToRoute(route.path)}
+          >
             <FontAwesomeIcon icon={route.icon} />
             {isOpened && <span>{route.title}</span>}
           </div>
