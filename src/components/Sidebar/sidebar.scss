@@ -1,10 +1,14 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 80px;
-  height: calc(100% - 40px);
+  min-height: calc(100% - 60px);
   background-color: #fff;
   color: #333;
   position: fixed;
   top: 20px;
+
   left: 20px;
   bottom: 20px;
   overflow-x: hidden;
@@ -12,6 +16,7 @@
   transition: 0.5s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  z-index: 1;
 
   &-header {
     border: 1px dashed orange;
@@ -66,13 +71,37 @@
 
 .sidebar>div {
   border: 2px dashed rgb(177, 10, 143);
-  ;
+  padding: 10px;
 
 }
 
 .sidebar-header {
   display: flex;
+  align-items: flex-end;
 
+  span {
+    margin-left: 5px;
+    margin-right: auto; // Добавлено для выравнивания по левому краю
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+
+  button {
+    background: white;
+    border: none;
+    z-index: 100;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+
+    svg {
+      color: rgb(54, 54, 54);
+    }
+  }
 }
 
 .sidebar button:hover {
@@ -81,10 +110,9 @@
 }
 
 .sidebar-nav {
-  border: 1px dashed blue;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; // Изменено на выравнивание по левому краю
 }
 
 .sidebar div>div {
@@ -108,15 +136,14 @@
 }
 
 .sidebar-footer {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
+  align-items: flex-start;
+  // position: absolute; Убрано
   bottom: 0;
-  width: 100%;
-  /* Занимает всю доступную ширину .sidebar */
-  // padding: 10px;
-  /* Можете настроить отступы по вашему желанию */
+  // width: 100%; Убрано
+
 }
 
 .active {
