@@ -17,6 +17,8 @@
   border-radius: 10px;
   z-index: 1;
 
+
+
   .item {
     display: flex;
     flex-direction: column;
@@ -24,6 +26,8 @@
     align-items: center;
   }
 }
+
+
 
 .sidebar>div {
   // border: 2px dashed rgb(177, 10, 143);
@@ -110,6 +114,12 @@
   width: 20vw;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 560px) {
+    width: 50vw;
+  }
+
+
 
   button {
     background-color: rgb(221, 216, 216);
