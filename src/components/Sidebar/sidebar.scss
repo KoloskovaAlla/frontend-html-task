@@ -8,7 +8,6 @@
   color: #333;
   position: fixed;
   top: 20px;
-
   left: 20px;
   bottom: 20px;
   overflow-x: hidden;
@@ -18,101 +17,25 @@
   border-radius: 10px;
   z-index: 1;
 
-  &-header {
-    border: 1px dashed orange;
+  .item {
     display: flex;
-    align-items: flex-end;
-
-    span {
-      margin-left: 5px;
-      border: 1px dashed blue;
-      // margin-bottom: 10px;    
-    }
-
-    img {
-      border: 1px dashed green;
-      width: 50px;
-      height: auto;
-      // margin-bottom: 10px;    
-    }
-
-    button {
-      position: fixed;
-      margin-left: 100px;
-      background: white;
-      border: none;
-      z-index: 100;
-      font-size: 20px;
-      cursor: pointer;
-      outline: none;
-      border-radius: 50%;
-
-      svg {
-        color: rgb(54, 54, 54);
-        /* Устанавливаем желаемый цвет для иконки */
-      }
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+
 }
 
-.sidebar.opened {
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
 
-  button {
-    background-color: rgb(221, 216, 216);
-    margin-right: -7%;
-    position: relative;
-    margin-left: auto;
-
-  }
-}
 
 .sidebar>div {
   border: 2px dashed rgb(177, 10, 143);
   padding: 10px;
-
-}
-
-.sidebar-header {
-  display: flex;
-  align-items: flex-end;
-
-  span {
-    margin-left: 5px;
-    margin-right: auto; // Добавлено для выравнивания по левому краю
-  }
-
-  img {
-    width: 50px;
-    height: auto;
-  }
-
-  button {
-    background: white;
-    border: none;
-    z-index: 100;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-    border-radius: 50%;
-
-    svg {
-      color: rgb(54, 54, 54);
-    }
-  }
 }
 
 .sidebar button:hover {
   color: #555;
-
-}
-
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; // Изменено на выравнивание по левому краю
 }
 
 .sidebar div>div {
@@ -129,10 +52,41 @@
   border-radius: 10px;
 }
 
-.item {
+.sidebar-header {
+  display: flex;
+  align-items: flex-end;
+
   span {
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: auto;
   }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+
+  button {
+    position: fixed;
+    margin-left: 100px;
+    background: white;
+    border: none;
+    z-index: 100;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+
+    svg {
+      color: rgb(54, 54, 54);
+    }
+  }
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar-footer {
@@ -140,14 +94,40 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  // position: absolute; Убрано
   bottom: 0;
-  // width: 100%; Убрано
+}
 
+.item {
+  span {
+    margin-left: 10px;
+  }
 }
 
 .active {
   background-color: #f0f0f0;
   border-radius: 10px;
   color: blue;
+}
+
+.sidebar.opened {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background-color: rgb(221, 216, 216);
+    margin-right: -7%;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item {
+    display: block;
+  }
 }
